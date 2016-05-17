@@ -10,7 +10,7 @@
             namespace: dxl_manager
             serial_ports:
                 dxl_port:
-                    port_name: "/dev/ttyUSB0"
+                    port_name: "/dev/ttyUSB_DYNAMIXEL"
                     baud_rate: 57142
                     min_motor_id: 1
                     max_motor_id: 10
@@ -26,6 +26,11 @@
                 --port dxl_port
                 pan_controller
                 tilt_controller"
+          output="screen"/>
+    
+    <!-- Note to publish joint_states and apply filter -->
+    <node name="robospect_ptu_node" pkg="robospect_ptu" type="ptu_joint_pub.py"
+          <param name="pan_offset" value="-0.044"/>
           output="screen"/>
           
 </launch>
