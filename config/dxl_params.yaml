@@ -23,4 +23,4 @@ tilt_controller:
         id: 2
         init: 2048
         min: 0
-        max: 4095
+        max: 4607
